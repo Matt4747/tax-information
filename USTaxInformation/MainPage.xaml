@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="USTaxInformation.MainPage">
+    <StackLayout Padding="50">
+        <!-- Place new controls here -->
+         <Label Text="Enter Information"
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Entry x:Name="amount"
+            Placeholder="Enter dollar amount"/>
+        <Entry x:Name="city"
+            Placeholder="Enter City"/>
+        <Entry x:Name="state"
+            Placeholder="Enter State"/>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="City/State"
+                       VerticalOptions="Center"/>
+                <Switch x:Name="type"
+                        OnColor="gray"
+                        />
+                <Label Text="Amount"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+        <Button Text="Search"
+                HorizontalOptions="FillAndExpand"
+                FontSize="40"
+                BackgroundColor="GhostWhite"
+                TextColor="Black"
+                Clicked="OnButtonClicked"/>
+                </StackLayout>
+        <Label x:Name="selectedZip"
+               Text=""/>
+        <Label x:Name="selectedCity"
+               Text=""/>
+        <Label x:Name="selectedState"
+               Text=""/>
+        <Label x:Name="selectedReturn"
+               Text=""/>
+        <Label x:Name="alert"
+            Text=""
+               TextColor="red"/>
+            
+        <ListView x:Name="listView"
+                  ItemSelected="OnItemSelected"/>
+    </StackLayout>
+</ContentPage>
